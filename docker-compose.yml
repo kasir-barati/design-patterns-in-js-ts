@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  mongo:
+    image: bitnami/mongodb:4.4-debian-10
+    container_name: ${APP_NAME}
+    hostname: ${APP_NAME}
+    env_file:
+      - .env
+    ports:
+      - $MONGODB_PORT:$MONGODB_PORT
