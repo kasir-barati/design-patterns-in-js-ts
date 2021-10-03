@@ -1,0 +1,87 @@
+version: "3"
+
+services:
+  server:
+    image: registry.gitlab.com/salam-sakhteman/infiniti-platform-server:latest-prod
+    ports:
+      - "7000:5000"
+    restart: always
+    depends_on:
+      - mongo
+      # - minio
+    environment:
+      NODE_ENV: production
+      API_ADDRESS: https://api.salamsakhteman.com/api
+      MONGODB_URL: mongo:27017/
+      DB_USERNAME: root
+      DB_PASSWORD: "nieiorn4alib"
+      MINIO_URL: minio
+      MINIO_ACCESS_KEY: AKIAIOSFODNN7EXAMPLE
+      MINIO_SECRET_KEY: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+      CLIENT: https://next.salamsakhteman.com
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: '&gBB\zvx/\02n_1Dali'
+      PAY_PING_TOKEN: c1ede4e82322c272074f2f6722c671bf249993ebc365da4abc0bd917b0845a42
+    container_name: inifiniti-contractor-server
+
+  mongo:
+    image: "docker.io/bitnami/mongodb:4.4-debian-10"
+    restart: always
+    ports:
+      - "27018:27017"
+    volumes:
+      - infiniti_mongo_volume_p:/bitnami/mongodb
+    environment:
+      MONGODB_USERNAME: ssuser
+      MONGODB_PASSWORD: nieiorn4
+      MONGODB_ADVERTISED_HOSTNAME: mongo
+      MONGODB_REPLICA_SET_MODE: primary
+      MONGODB_REPLICA_SET_KEY: "nieiorn4secretkey"
+      MONGODB_ROOT_PASSWORD: "nieiorn4alib"
+    container_name: inifiniti-database
+
+  mongodb-secondary:
+    image: "docker.io/bitnami/mongodb:4.4-debian-10"
+    depends_on:
+      - mongo
+    ports:
+      - "27020:27017"
+    environment:
+      MONGODB_ADVERTISED_HOSTNAME: mongodb-secondary
+      MONGODB_REPLICA_SET_MODE: secondary
+      MONGODB_INITIAL_PRIMARY_HOST: mongo
+      MONGODB_INITIAL_PRIMARY_ROOT_PASSWORD: "nieiorn4alib"
+      MONGODB_REPLICA_SET_KEY: "nieiorn4secretkey"
+    container_name: inifiniti-secondary-database
+
+  mongodb-arbiter:
+    image: "docker.io/bitnami/mongodb:4.4-debian-10"
+    depends_on:
+      - mongo
+    environment:
+      MONGODB_ADVERTISED_HOSTNAME: mongodb-arbiter
+      MONGODB_REPLICA_SET_MODE: arbiter
+      MONGODB_INITIAL_PRIMARY_HOST: mongo
+      MONGODB_INITIAL_PRIMARY_ROOT_PASSWORD: "nieiorn4alib"
+      MONGODB_REPLICA_SET_KEY: "nieiorn4secretkey"
+    container_name: inifiniti-arbiter-database
+
+  # minio:
+  #   image: minio/minio:RELEASE.2021-01-30T00-20-58Z.hotfix.0c1d75aa8
+  #   restart: always
+  #   ports:
+  #     - "9000:9000"
+  #   volumes:
+  #     - infiniti_minio_volume:/data
+  #   environment:
+  #     MINIO_ACCESS_KEY: AKIAIOSFODNN7EXAMPLE
+  #     MINIO_SECRET_KEY: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+  #   command: server /data
+  #   container_name: inifinit-minio
+
+volumes:
+  infiniti_mongo_volume_p:
+  infiniti_mongo_secondary_volume:
+  infiniti_mongo_arbiter_volume:
+  # infiniti_minio_volume:
