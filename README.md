@@ -1,21 +1,16 @@
 # Intro
 
-Originally this repo tend to be soly for SOLID but I changed my mind now and I wanna add more to it. Feel free to give it a star.
+So you wanna learn what is sharding. Congrats, you've ended up in the right place. Learn more about sharing in **general** [here](https://aws.amazon.com/what-is/database-sharding/). And also see the examples implemented here in this repo by watching this [YouTube video](https://youtu.be/8sk75-6W0ik?si=qICl1DboCdU4V3mB).
 
-## SOLID
+## My handwritings for it
 
-### Open close
+If you are able to make sense of what I wrote here you go:
 
-`git checkout -b open-close-principle-payment-gateway remotes/origin/open-close-principle-payment-gateway`
+![First page of my handwritings in sharding](./assets/01.jpeg)
+![Second page of my handwritings in sharding](./assets/02.jpg)
+![Third page of my handwritings in sharding](./assets/03.jpg)
+![Forth page of my handwritings in sharding](./assets/04.jpg)
+![Fifth page of my handwritings in sharding](./assets/05.jpg)
+![Sixth page of my handwritings in sharding](./assets/06.jpg)
 
-### Liskov
-
-`git checkout -b liskov-mongoose-dicriminator-base-repository remotes/origin/liskov-mongoose-dicriminator-base-repository`
-
-## Design patterns in JS
-
-`git checkout -b js-design-paterns remotes/origin/js-design-paterns`
-
-## MongoDB Sharding
-
-`git checkout -b mongodb-sharding remotes/origin/mongodb-sharding`
+But if you cannot, do not worry too much. I guess you could just go to the first two links I shared in order to gain a better understanding of what is going on here :slightly_smiling_face:.
