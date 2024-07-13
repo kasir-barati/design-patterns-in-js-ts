@@ -1,6 +1,12 @@
 import { registerAs } from '@nestjs/config';
 import { NodeEnv, validateEnv } from '@shared';
-import { IsEnum, IsOptional, IsString } from 'class-validator';
+import {
+  IsEnum,
+  IsInt,
+  IsOptional,
+  IsString,
+  Min,
+} from 'class-validator';
 import { AppConfig } from '../app.type';
 
 declare global {
@@ -17,6 +23,11 @@ export default registerAs('appConfig', (): AppConfig => {
 });
 
 class EnvironmentVariables implements AppConfig {
+  @IsInt()
+  @Min(0)
+  @IsOptional()
+  APP_PORT: number = 3000;
+
   @IsEnum(NodeEnv)
   @IsOptional()
   NODE_ENV: NodeEnv = NodeEnv.development;
