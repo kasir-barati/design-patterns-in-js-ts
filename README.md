@@ -15,3 +15,7 @@ Originally this repo tend to be soly for SOLID but I changed my mind now and I w
 ## Design patterns in JS
 
 `git checkout -b js-design-paterns remotes/origin/js-design-paterns`
+
+## MongoDB Sharding
+
+`git checkout -b mongodb-sharding remotes/origin/mongodb-sharding`
