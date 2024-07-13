@@ -7,6 +7,7 @@ import { AppService } from './app.service';
 import appConfig from './configs/app.config';
 import corsConfig from './configs/cors.config';
 import { MongooseModuleConfig } from './configs/mongoose.config';
+import { Post, PostSchema } from './post.model';
 
 @Module({
   imports: [
@@ -20,6 +21,9 @@ import { MongooseModuleConfig } from './configs/mongoose.config';
       imports: [ConfigModule.forFeature(appConfig)],
       useClass: MongooseModuleConfig,
     }),
+    MongooseModule.forFeature([
+      { name: Post.name, schema: PostSchema },
+    ]),
   ],
   controllers: [AppController],
   providers: [AppService],

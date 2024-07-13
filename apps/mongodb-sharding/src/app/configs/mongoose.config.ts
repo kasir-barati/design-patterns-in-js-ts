@@ -23,6 +23,10 @@ export class MongooseModuleConfig implements MongooseOptionsFactory {
       `Connected to MongoDB: ${connectionString}`,
       'NestApplication',
     );
+    Logger.log(
+      `MongoDB Compass connection string: ${DATABASE_URL}`,
+      'NestApplication',
+    );
 
     return {
       autoIndex: true,
