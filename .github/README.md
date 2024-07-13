@@ -21,3 +21,9 @@ But if you cannot, do not worry too much. I guess you could just go to the first
 - [`Pure NodeJS`](https://nodejs.org/en)
 - [`NodeJS native test runner`](https://dev.to/mbarzeev/is-nodejs-test-runner-dev-ready-4gm8)
 - [`Automated tests`](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs)
+
+### How to add new apps?
+
+```cmd
+nx g @nx/nest:app app-name --directory apps/app-name
+```

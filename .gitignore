@@ -105,3 +105,4 @@ dist
 
 .nx/installation
 .nx/cache
+.nx/workspace-data

@@ -1,0 +1,24 @@
+{
+  "name": "mongodb-sharding",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/mongodb-sharding/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "mongodb-sharding:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "mongodb-sharding:build:development"
+        },
+        "production": {
+          "buildTarget": "mongodb-sharding:build:production"
+        }
+      }
+    }
+  }
+}
