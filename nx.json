@@ -22,9 +22,14 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": [
-        "apps/mongodb-sharding-e2e/**/*"
-      ]
+      "exclude": ["apps/mongodb-sharding-e2e/**/*"]
     }
-  ]
+  ],
+  "targetDefaults": {
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["default", "^default"]
+    }
+  }
 }
