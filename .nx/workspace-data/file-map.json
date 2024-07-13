@@ -63,72 +63,8 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "assets/03.jpg",
-        "hash": "1720753011180792896"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "8529806343087814844"
-      },
-      {
-        "file": "assets/02.jpg",
-        "hash": "15463078290305056432"
-      },
-      {
-        "file": "assets/06.jpg",
-        "hash": "4369143893358406222"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "16936441711144470533"
-      },
-      {
-        "file": ".github/README.md",
-        "hash": "1659478986202111811"
-      },
-      {
-        "file": "nx.bat",
-        "hash": "16828809655253213278"
-      },
-      {
-        "file": "assets/04.jpg",
-        "hash": "16087175382533778781"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "9643823489633808522"
-      },
-      {
-        "file": "assets/05.jpg",
-        "hash": "6710137721693545153"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "14486483495769361674"
-      },
-      {
-        "file": "nx.json",
-        "hash": "5936874473582512920"
-      },
-      {
-        "file": "nx",
-        "hash": "17165975525224888679"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "17036597317268170571"
-      },
-      {
-        "file": "assets/01.jpeg",
-        "hash": "15929219753331560823"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "15180435016826371789"
-      },
-      {
-        "file": "package.json",
-        "hash": "1716565267147352465"
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
       },
       {
         "file": ".eslintrc.json",
@@ -139,63 +75,83 @@
         "hash": "16108882286977478512"
       },
       {
+        "file": ".github/README.md",
+        "hash": "11008112818727369431"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "17036597317268170571"
+      },
+      {
         "file": ".nx/nxw.js",
         "hash": "11254603345854076312"
       },
       {
-        "file": ".eslintignore",
-        "hash": "7663861978715868291"
+        "file": ".prettierignore",
+        "hash": "15180435016826371789"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "9643823489633808522"
+      },
+      {
+        "file": "assets/01.jpeg",
+        "hash": "15929219753331560823"
+      },
+      {
+        "file": "assets/02.jpg",
+        "hash": "15463078290305056432"
+      },
+      {
+        "file": "assets/03.jpg",
+        "hash": "1720753011180792896"
+      },
+      {
+        "file": "assets/04.jpg",
+        "hash": "16087175382533778781"
+      },
+      {
+        "file": "assets/05.jpg",
+        "hash": "6710137721693545153"
+      },
+      {
+        "file": "assets/06.jpg",
+        "hash": "4369143893358406222"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "8529806343087814844"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "14486483495769361674"
+      },
+      {
+        "file": "nx",
+        "hash": "17165975525224888679"
+      },
+      {
+        "file": "nx.bat",
+        "hash": "16828809655253213278"
+      },
+      {
+        "file": "nx.json",
+        "hash": "5936874473582512920"
       },
       {
         "file": "package-lock.json",
         "hash": "16292685959780399467"
+      },
+      {
+        "file": "package.json",
+        "hash": "1716565267147352465"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "16936441711144470533"
       }
     ],
     "projectFileMap": {
-      "mongodb-sharding-e2e": [
-        {
-          "file": "apps/mongodb-sharding-e2e/.eslintrc.json",
-          "hash": "2295303304320410742"
-        },
-        {
-          "file": "apps/mongodb-sharding-e2e/jest.config.ts",
-          "hash": "9050333286946531303"
-        },
-        {
-          "file": "apps/mongodb-sharding-e2e/project.json",
-          "hash": "5047639570573387382"
-        },
-        {
-          "file": "apps/mongodb-sharding-e2e/src/mongodb-sharding/mongodb-sharding.spec.ts",
-          "hash": "4747019362565984448",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/mongodb-sharding-e2e/src/support/global-setup.ts",
-          "hash": "14688124112638150235"
-        },
-        {
-          "file": "apps/mongodb-sharding-e2e/src/support/global-teardown.ts",
-          "hash": "10856769668484651558"
-        },
-        {
-          "file": "apps/mongodb-sharding-e2e/src/support/test-setup.ts",
-          "hash": "9379448616442792630",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/mongodb-sharding-e2e/tsconfig.json",
-          "hash": "15443990093475294480"
-        },
-        {
-          "file": "apps/mongodb-sharding-e2e/tsconfig.spec.json",
-          "hash": "14519349202314136898"
-        }
-      ],
       "mongodb-sharding": [
         {
           "file": "apps/mongodb-sharding/.eslintrc.json",
@@ -274,6 +230,50 @@
           "deps": [
             "npm:@nx/webpack"
           ]
+        }
+      ],
+      "mongodb-sharding-e2e": [
+        {
+          "file": "apps/mongodb-sharding-e2e/.eslintrc.json",
+          "hash": "2295303304320410742"
+        },
+        {
+          "file": "apps/mongodb-sharding-e2e/jest.config.ts",
+          "hash": "9050333286946531303"
+        },
+        {
+          "file": "apps/mongodb-sharding-e2e/project.json",
+          "hash": "5047639570573387382"
+        },
+        {
+          "file": "apps/mongodb-sharding-e2e/src/mongodb-sharding/mongodb-sharding.spec.ts",
+          "hash": "4747019362565984448",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/mongodb-sharding-e2e/src/support/global-setup.ts",
+          "hash": "14688124112638150235"
+        },
+        {
+          "file": "apps/mongodb-sharding-e2e/src/support/global-teardown.ts",
+          "hash": "10856769668484651558"
+        },
+        {
+          "file": "apps/mongodb-sharding-e2e/src/support/test-setup.ts",
+          "hash": "9379448616442792630",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/mongodb-sharding-e2e/tsconfig.json",
+          "hash": "15443990093475294480"
+        },
+        {
+          "file": "apps/mongodb-sharding-e2e/tsconfig.spec.json",
+          "hash": "14519349202314136898"
         }
       ]
     }
