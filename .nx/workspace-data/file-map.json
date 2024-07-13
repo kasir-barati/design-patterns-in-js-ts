@@ -1,0 +1,66 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.4.3",
+  "deps": {
+    "nx": "19.4.3"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "assets/01.jpeg",
+        "hash": "15929219753331560823"
+      },
+      {
+        "file": "nx.json",
+        "hash": "16250477738486989997"
+      },
+      {
+        "file": ".nx/nxw.js",
+        "hash": "11254603345854076312"
+      },
+      {
+        "file": ".github/LICENSE",
+        "hash": "16108882286977478512"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "2069630178841097777"
+      },
+      {
+        "file": "assets/02.jpg",
+        "hash": "15463078290305056432"
+      },
+      {
+        "file": "assets/05.jpg",
+        "hash": "6710137721693545153"
+      },
+      {
+        "file": ".github/README.md",
+        "hash": "2967399610834403973"
+      },
+      {
+        "file": "nx",
+        "hash": "17165975525224888679"
+      },
+      {
+        "file": "nx.bat",
+        "hash": "16828809655253213278"
+      },
+      {
+        "file": "assets/06.jpg",
+        "hash": "4369143893358406222"
+      },
+      {
+        "file": "assets/04.jpg",
+        "hash": "16087175382533778781"
+      },
+      {
+        "file": "assets/03.jpg",
+        "hash": "1720753011180792896"
+      }
+    ],
+    "projectFileMap": {}
+  }
+}

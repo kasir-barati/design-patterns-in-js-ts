@@ -14,3 +14,10 @@ If you are able to make sense of what I wrote here you go:
 ![Sixth page of my handwritings in sharding](./assets/06.jpg)
 
 But if you cannot, do not worry too much. I guess you could just go to the first two links I shared in order to gain a better understanding of what is going on here :slightly_smiling_face:.
+
+## What are we using here?
+
+- [`nx`](https://nx.dev/)
+- [`Pure NodeJS`](https://nodejs.org/en)
+- [`NodeJS native test runner`](https://dev.to/mbarzeev/is-nodejs-test-runner-dev-ready-4gm8)
+- [`Automated tests`](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs)
