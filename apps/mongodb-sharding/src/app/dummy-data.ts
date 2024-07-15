@@ -32,14 +32,13 @@ const handles = [
   'yoghurt_fan',
   'zen_buddhist',
 ] as const;
+let postText = 't';
 const postImage = 'https://mongodb-sharding.com/images/random.png';
 const posts = [];
 
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < 1_000; i++) {
   for (const handle of handles) {
-    const postText = String(
-      Math.floor(Date.now() * Math.random() * 10_000),
-    );
+    postText += '1';
 
     posts.push({
       handle,

@@ -81,6 +81,10 @@ async function isDatabaseSharded(
     .collection('databases')
     .findOne({ _id: db as any });
 
+  if (!result) {
+    return false;
+  }
+
   return result.partitioned;
 }
 
