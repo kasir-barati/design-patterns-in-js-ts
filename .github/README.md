@@ -6,6 +6,23 @@ So you wanna learn what is sharding. Congrats, you've ended up in the right plac
 >
 > Once a collection **has been sharded**, MongoDB provides **NO** method to unshard a sharded collection ([read more here](https://www.mongodb.com/docs/manual/sharding/#considerations-before-sharding)).
 
+# Why not just vertical scaling? Here we'll specifically talk about AWS EC2.
+
+So I was thinking that with AWS I should be a ble to increase my EC2 instance resources indefinitely. Note: we are oversimplifying things here for the sake of argument. Assume money is not a problem :wink:. So I asked the following question from [Amazon Q](https://aws.amazon.com/q/) the following question:
+
+- Me: Can I just increase an EC2 instance resources indefinitely?
+- Amazon Q:
+  > Here is my response to the question:
+  > You can increase the resources of an EC2 instance, but there are some limitations to keep in mind:
+  >
+  > 1. Instance resizing requires stopping the instance, changing the instance type, and then restarting the instance. This will cause a temporary outage for your application.
+  > 2. There are service limits or quotas on the number and type of EC2 instances you can launch in each AWS Region. You can request increases to these limits through the AWS Service Quotas console, but the requests are subject to review by AWS.
+  > 3. To automate the process of resizing an instance based on load, you can use a combination of AWS services like CloudWatch and AWS Systems Manager. CloudWatch can monitor instance metrics like CPU utilization and trigger an automation in Systems Manager to resize the instance.
+  > 4. Alternatively, you can leverage scheduled scaling based on time if your backup processes happen at predictable times. CloudWatch can trigger an automation to upsize the instance before the backup and then downsize it afterwards.
+  > 5. Another option is to use AWS Backup to take snapshots of your EC2 instance's EBS volumes. This allows you to restore the instance from a previous state without the need to resize it.
+  >
+  > I'd recommend reviewing the latest AWS documentation on EC2 instance resizing, service limits, and backup/restore options to get the most up-to-date information on implementing your use case.
+
 ## My handwritings for it
 
 If you are able to make sense of what I wrote here you go:
@@ -84,3 +101,9 @@ nx serve mongodb-sharding
 ### Why Mongoose?
 
 - Mongoose's `HydratedDocument` type transforms a raw document interface into the type of the hydrated Mongoose document, including virtuals, methods, etc.
+
+# [LinkedIn Post](https://www.linkedin.com/posts/kasir-barati_mongodb-sharding-database-activity-7218604599513939968-TqWR?utm_source=share&utm_medium=member_desktop)
+
+# Refs
+
+- [For the bash script](https://ankitkumarakt746.medium.com/mongodb-sharded-cluster-with-replica-set-in-docker-81322c903513)
