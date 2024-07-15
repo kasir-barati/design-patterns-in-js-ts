@@ -7,11 +7,15 @@ export type PostDocument = HydratedDocument<Post>;
 
 @Schema({
   timestamps: true,
+  // Because I wanna be 100% sure of the collection name.
+  collection: 'posts',
   validateBeforeSave: true,
+  shardKey: { handle: 1 },
 })
 export class Post {
   @Prop({
     required: true, // To be a shard key all the docs have to have it.
+    index: true,
   })
   handle: string; // Unique identifier for each user
   // TODO: add the user doc + its relationship.

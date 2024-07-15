@@ -36,7 +36,7 @@ class EnvironmentVariables implements AppConfig {
   DATABASE_URL: string;
 
   @IsString()
-  MONGO_INITDB_DATABASE: string;
+  MONGODB_DATABASE: string;
 
   @IsString()
   @IsOptional()
