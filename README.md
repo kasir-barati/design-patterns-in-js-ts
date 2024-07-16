@@ -18,4 +18,10 @@ Originally this repo tend to be soly for SOLID but I changed my mind now and I w
 
 ## MongoDB Sharding
 
-`git checkout -b mongodb-sharding remotes/origin/mongodb-sharding`
+`git checkout -b mongodb-sharding `
+
+## Audit log
+
+Here I will try to create a monorepo with two NestJS app. In it I will try to create an audit log table in database in both MongoDB (NoSQL), and PostgreSQL (SQL). Checkout to it for more info.
+
+`git checkout -b audit-log remotes/origin/mongodb-sharding`
